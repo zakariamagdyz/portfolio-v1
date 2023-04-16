@@ -1,28 +1,30 @@
+import autoTyping from "./autoTyping";
 import "./style.css";
-import typescriptLogo from "./typescript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter";
 
 const initApp = () => {
-  document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div class="bg-black">
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`;
+  const hamburgerBtn = document.getElementById("hamburger-open-button")!;
+  const darkButton = document.getElementById("dark-btn")!;
+  const mobileMenu = document.getElementById("mobile-menu")!;
+  const typeElement = document.getElementById("type-element")!;
 
-  setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
+  const toggleMenu = () => {
+    hamburgerBtn.classList.toggle("toggle-btn");
+    mobileMenu?.classList.toggle("flex");
+    mobileMenu?.classList.toggle("hidden");
+  };
+
+  hamburgerBtn.addEventListener("click", toggleMenu);
+  mobileMenu.addEventListener("click", toggleMenu);
+
+  darkButton.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+  });
+
+  autoTyping(typeElement, ["Developer", "Designer", "Author"], {
+    typeSpeed: 100,
+    deleteSpeed: 100,
+    // shouldStopAfterComplete: true,
+  });
 };
 
 document.addEventListener("DOMContentLoaded", initApp);
