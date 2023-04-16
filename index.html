@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="sm:scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -16,13 +16,15 @@
   </head>
   <body>
     <!-- Start Header -->
-    <header class="sticky top-0 z-10 bg-white text-white dark:bg-slate-400">
+    <header class="sticky top-0 z-10 bg-white text-white dark:bg-slate-900">
       <section
         class="container mx-auto flex items-center justify-between px-2 py-5"
       >
         <a class="flex items-center gap-2" href="#hero">
           <img src="./src/assets/img/logo.png" alt="logo" class="w-8" />
-          <span class="text-2xl font-bold text-indigo-900">Portwind.</span>
+          <span class="text-2xl font-bold text-indigo-900 dark:text-white"
+            >Portwind.</span
+          >
         </a>
         <button
           id="hamburger-open-button"
@@ -33,7 +35,9 @@
           ></div>
         </button>
         <nav class="hidden text-xl sm:block" aria-label="main">
-          <ul class="flex space-x-10 text-sm font-bold uppercase text-gray-600">
+          <ul
+            class="flex space-x-10 text-sm font-bold uppercase text-gray-600 dark:text-gray-100"
+          >
             <li class="hover:text-gray-500">
               <a href="#about-me">about me</a>
             </li>
@@ -80,7 +84,7 @@
     <main>
       <!-- Start Hero -->
       <section
-        class="widescreen:section-min-height tallscreen:section-min-height h-[50vh] scroll-mt-[72px] bg-gradient-to-t from-indigo-200"
+        class="widescreen:section-min-height tallscreen:section-min-height h-[50vh] scroll-mt-[72px] bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900"
         id="hero"
       >
         <div
@@ -97,7 +101,7 @@
           <article
             class="absolute left-20 top-1/3 text-xl font-bold sm:left-36 sm:text-4xl md:left-10 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl"
           >
-            <span class="text-gray-600">Frelance</span>
+            <span class="text-gray-600 dark:text-gray-300">Frelance</span>
             <div class="flex gap-1 sm:gap-2">
               <p class="text-red-500" id="type-element"></p>
               <span
@@ -107,10 +111,12 @@
           </article>
 
           <article
-            class="absolute bottom-0 right-10 top-0 m-auto hidden h-fit w-1/3 flex-col gap-5 rounded-md bg-white p-6 shadow-lg lg:flex"
+            class="absolute bottom-0 right-10 top-0 m-auto hidden h-fit w-1/3 flex-col gap-5 rounded-md bg-white p-6 shadow-lg dark:bg-slate-900 dark:shadow-slate-800 lg:flex"
           >
-            <h1 class="text-4xl font-bold text-indigo-900">Hi, I'm John</h1>
-            <p class="to-gray-400">
+            <h1 class="text-4xl font-bold text-indigo-900 dark:text-indigo-200">
+              Hi, I'm John
+            </h1>
+            <p class="to-gray-400 dark:text-white">
               with over 10 years of experience on web design and development.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. N oumquam
               quo provident, facere minus temporibus veniam nostrum
@@ -129,7 +135,7 @@
       <!-- Start About ME -->
       <section
         id="about-me"
-        class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[70px]"
+        class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[70px] dark:bg-slate-900"
       >
         <div
           class="container mx-auto flex flex-col-reverse items-center gap-10 py-20 sm:flex-row sm:py-40"
@@ -180,12 +186,12 @@
       <!-- Start Services -->
       <section
         id="services"
-        class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[72px] py-8"
+        class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[72px] py-8 dark:bg-slate-900"
       >
         <div class="container mx-auto">
           <article class="space-y-3 text-center">
-            <h2 class="font-bold text-indigo-600">Services</h2>
-            <h2 class="text-3xl">What do I offer?</h2>
+            <h2 class="font-bold text-indigo-600 dark:text-white">Services</h2>
+            <h2 class="text-3xl dark:text-white">What do I offer?</h2>
             <p class="mx-auto w-1/2 text-gray-400">
               My approach to website design is to create a website that
               strengthens your company’s brand while ensuring ease of use and
@@ -196,55 +202,79 @@
           <ul
             class="grid items-center justify-center gap-3 px-2 py-12 sm:grid-cols-2 md:grid-cols-3"
           >
-            <li class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-xl">
+            <li
+              class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-md dark:shadow-slate-800"
+            >
               <img src="./src/assets/img/icon.png" alt="service" class="w-10" />
-              <h2 class="text-lg font-medium">UX / UI Design</h2>
-              <p class="text-gray-400">
+              <h2 class="text-lg font-medium dark:text-white">
+                UX / UI Design
+              </h2>
+              <p class="text-gray-400 dark:text-white">
                 I specialize in creating interactive websites for individuals
                 and small businesses.
               </p>
               <a class="text-sm font-semibold text-indigo-600">Read More</a>
             </li>
-            <li class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-xl">
+            <li
+              class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-md dark:shadow-slate-800"
+            >
               <img src="./src/assets/img/icon.png" alt="service" class="w-10" />
-              <h2 class="text-lg font-medium">UX / UI Design</h2>
-              <p class="text-gray-400">
+              <h2 class="text-lg font-medium dark:text-white">
+                UX / UI Design
+              </h2>
+              <p class="text-gray-400 dark:text-white dark:text-white">
                 I specialize in creating interactive websites for individuals
                 and small businesses.
               </p>
               <a class="text-sm font-semibold text-indigo-600">Read More</a>
             </li>
-            <li class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-xl">
+            <li
+              class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-md dark:shadow-slate-800"
+            >
               <img src="./src/assets/img/icon.png" alt="service" class="w-10" />
-              <h2 class="text-lg font-medium">UX / UI Design</h2>
-              <p class="text-gray-400">
+              <h2 class="text-lg font-medium dark:text-white">
+                UX / UI Design
+              </h2>
+              <p class="text-gray-400 dark:text-white">
                 I specialize in creating interactive websites for individuals
                 and small businesses.
               </p>
               <a class="text-sm font-semibold text-indigo-600">Read More</a>
             </li>
-            <li class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-xl">
+            <li
+              class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-md dark:shadow-slate-800"
+            >
               <img src="./src/assets/img/icon.png" alt="service" class="w-10" />
-              <h2 class="text-lg font-medium">UX / UI Design</h2>
-              <p class="text-gray-400">
+              <h2 class="text-lg font-medium dark:text-white">
+                UX / UI Design
+              </h2>
+              <p class="text-gray-400 dark:text-white">
                 I specialize in creating interactive websites for individuals
                 and small businesses.
               </p>
               <a class="text-sm font-semibold text-indigo-600">Read More</a>
             </li>
-            <li class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-xl">
+            <li
+              class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-md dark:shadow-slate-800"
+            >
               <img src="./src/assets/img/icon.png" alt="service" class="w-10" />
-              <h2 class="text-lg font-medium">UX / UI Design</h2>
-              <p class="text-gray-400">
+              <h2 class="text-lg font-medium dark:text-white">
+                UX / UI Design
+              </h2>
+              <p class="text-gray-400 dark:text-white">
                 I specialize in creating interactive websites for individuals
                 and small businesses.
               </p>
               <a class="text-sm font-semibold text-indigo-600">Read More</a>
             </li>
-            <li class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-xl">
+            <li
+              class="mx-auto max-w-sm space-y-3 rounded p-5 shadow-md dark:shadow-slate-800"
+            >
               <img src="./src/assets/img/icon.png" alt="service" class="w-10" />
-              <h2 class="text-lg font-medium">UX / UI Design</h2>
-              <p class="text-gray-400">
+              <h2 class="text-lg font-medium dark:text-white">
+                UX / UI Design
+              </h2>
+              <p class="text-gray-400 dark:text-white">
                 I specialize in creating interactive websites for individuals
                 and small businesses.
               </p>
@@ -257,13 +287,15 @@
       <!-- Start WORk -->
       <section
         id="works"
-        class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[72px] py-8"
+        class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[72px] py-8 dark:bg-slate-900"
       >
         <div class="container mx-auto">
           <article class="space-y-3 text-center">
-            <h2 class="font-bold text-indigo-600">PORTFOLIO</h2>
-            <h2 class="text-3xl">Works & Projects</h2>
-            <p class="mx-auto w-1/2 text-gray-400">
+            <h2 class="font-bold text-indigo-600 dark:text-indigo-300">
+              PORTFOLIO
+            </h2>
+            <h2 class="text-3xl dark:text-white">Works & Projects</h2>
+            <p class="mx-auto w-1/2 text-gray-400 dark:text-white">
               I help designers, small agencies and businesses bring their ideas
               to life. Powered by Figma, VS Code and coffee, I turn your
               requirements into a well-designed websites
@@ -298,13 +330,15 @@
       <!-- Start Contact -->
       <section
         id="contact"
-        class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[72px] py-8"
+        class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[72px] py-8 dark:bg-slate-900"
       >
         <div class="container mx-auto">
           <article class="flex flex-col items-center gap-3">
-            <h2 class="font-bold text-indigo-600">CONTACT</h2>
+            <h2 class="font-bold text-indigo-600 dark:text-indigo-300">
+              CONTACT
+            </h2>
             <h2 class="text-3xl dark:text-white">Have a Question?</h2>
-            <p class="w-1/2 text-center text-gray-400">
+            <p class="w-1/2 text-center text-gray-400 dark:text-white">
               Do you have an idea? Let's discuss it and see what we can do
               together.
             </p>
@@ -313,22 +347,22 @@
             <input
               type="text"
               placeholder="Name surname"
-              class="w-full rounded border border-solid border-slate-900 p-3 text-xl text-black"
+              class="w-full rounded p-3 text-xl text-black ring-1 ring-indigo-300 dark:bg-slate-800 dark:text-white dark:ring-0"
             />
             <input
               type="email"
               placeholder="Email"
-              class="w-full rounded border border-solid border-slate-900 p-3 text-xl text-black"
+              class="w-full rounded p-3 text-xl text-black ring-1 ring-indigo-300 dark:bg-slate-800 dark:text-white dark:ring-0"
             />
             <textarea
               placeholder="Message..."
               id=""
               cols="30"
               rows="10"
-              class="w-full rounded border border-solid border-slate-900 p-3 text-xl text-black"
+              class="w-full rounded p-3 text-xl text-black ring-1 ring-indigo-300 dark:bg-slate-800 dark:text-white dark:ring-0"
             ></textarea>
             <button
-              class="w-full rounded-xl border border-solid border-slate-900 bg-indigo-700 p-3 text-white hover:bg-indigo-600 active:bg-indigo-500 dark:border-none md:w-1/2"
+              class="w-full rounded-xl bg-indigo-700 p-3 text-white ring-1 ring-indigo-300 hover:bg-indigo-600 active:bg-indigo-500 dark:border-none dark:ring-0 md:w-1/2"
             >
               Submit
             </button>

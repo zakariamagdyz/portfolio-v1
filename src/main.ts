@@ -14,10 +14,24 @@ const initApp = () => {
     mobileMenu?.classList.toggle("hidden");
   };
 
+  const getWebMode = () => {
+    const isDarkMode = localStorage.getItem("isDarkMode");
+    if (!isDarkMode) return;
+    const parsedMode = JSON.parse(isDarkMode);
+
+    if (parsedMode) document.documentElement.classList.add("dark");
+  };
+
   hamburgerBtn.addEventListener("click", toggleMenu);
   mobileMenu.addEventListener("click", toggleMenu);
 
   darkButton.addEventListener("click", () => {
+    const isDarkMode = localStorage.getItem("isDarkMode");
+    if (isDarkMode === "true") {
+      localStorage.setItem("isDarkMode", "false");
+    } else {
+      localStorage.setItem("isDarkMode", "true");
+    }
     document.documentElement.classList.toggle("dark");
   });
 
@@ -26,6 +40,8 @@ const initApp = () => {
     deleteSpeed: 100,
     // shouldStopAfterComplete: true,
   });
+
+  getWebMode();
 
   currentYear.innerText = new Date().getFullYear().toString();
 };
