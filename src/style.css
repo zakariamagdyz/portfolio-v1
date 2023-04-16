@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply min-h-screen bg-gradient-to-t from-indigo-200 font-nunito;
+    @apply min-h-screen  font-nunito;
   }
 }
 @layer utilities {

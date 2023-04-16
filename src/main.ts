@@ -6,6 +6,7 @@ const initApp = () => {
   const darkButton = document.getElementById("dark-btn")!;
   const mobileMenu = document.getElementById("mobile-menu")!;
   const typeElement = document.getElementById("type-element")!;
+  const currentYear = document.getElementById("current-year")!;
 
   const toggleMenu = () => {
     hamburgerBtn.classList.toggle("toggle-btn");
@@ -25,6 +26,8 @@ const initApp = () => {
     deleteSpeed: 100,
     // shouldStopAfterComplete: true,
   });
+
+  currentYear.innerText = new Date().getFullYear().toString();
 };
 
 document.addEventListener("DOMContentLoaded", initApp);

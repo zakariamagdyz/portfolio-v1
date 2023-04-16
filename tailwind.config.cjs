@@ -4,7 +4,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      screens: {},
+      screens: {
+        widescreen: { raw: "(min-aspect-ratio: 3/2)" },
+        tallscreen: { raw: "(max-aspect-ratio: 13/20)" },
+      },
       fontFamily: {
         nunito: ["Nunito", "sans-serif"],
       },
